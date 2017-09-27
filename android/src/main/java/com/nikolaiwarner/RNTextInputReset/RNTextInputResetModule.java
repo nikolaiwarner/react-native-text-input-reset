@@ -25,6 +25,8 @@ public class RNTextInputResetModule extends ReactContextBaseJavaModule {
     return "RNTextInputReset";
   }
 
+  // Props to https://github.com/MattFoley for this temporary hack
+  // https://github.com/facebook/react-native/pull/12462#issuecomment-298812731
   @ReactMethod
   public void resetKeyboardInput(final int reactTagToReset) {
       UIManagerModule uiManager = getReactApplicationContext().getNativeModule(UIManagerModule.class);

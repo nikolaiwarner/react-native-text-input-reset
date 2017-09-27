@@ -1,6 +1,13 @@
 
 # react-native-text-input-reset
 
+This package provides a temporary hack around a bug found in some android
+keyboards so that the contents of a TextInput can be properly cleared.
+https://issuetracker.google.com/issues/36928977
+
+It's likely this will be solved in a future release of React Native.
+https://github.com/facebook/react-native/pull/12462
+
 ## Getting started
 
 `$ yarn add react-native-text-input-reset`
