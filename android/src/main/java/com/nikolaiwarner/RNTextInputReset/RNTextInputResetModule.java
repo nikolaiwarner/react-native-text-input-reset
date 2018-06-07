@@ -9,7 +9,9 @@ import com.facebook.react.uimanager.UIBlock;
 import com.facebook.react.uimanager.NativeViewHierarchyManager;
 import android.content.Context;
 import android.view.View;
+import android.widget.TextView;
 import android.view.inputmethod.InputMethodManager;
+import android.util.Log;
 
 public class RNTextInputResetModule extends ReactContextBaseJavaModule {
 
@@ -37,6 +39,10 @@ public class RNTextInputResetModule extends ReactContextBaseJavaModule {
               if (imm != null) {
                   View viewToReset = nativeViewHierarchyManager.resolveView(reactTagToReset);
                   imm.restartInput(viewToReset);
+                  try {
+                    TextView textView = (TextView) viewToReset;
+                    textView.setText("");
+                  } catch (Exception e) {}
               }
           }
       });
